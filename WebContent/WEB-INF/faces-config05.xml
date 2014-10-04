@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd" version="1.2">
+
+    <!--
+     ==================================================
+      NAVIGATION RULES
+     ==================================================
+    -->
+
+    <!-- ADMIN APP LIST BY UNIVERSITY -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminAppListByUniversity.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminAppListByUniv</from-outcome>
+            <to-view-id>/jsp/adminAppListByUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewPrint</from-outcome>
+            <to-view-id>/jsp/appReviewPrint.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/jsp/adminAppListByUniversity2.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminAppListByUniv2</from-outcome>
+            <to-view-id>/jsp/adminAppListByUniversity2.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewPrint</from-outcome>
+            <to-view-id>/jsp/appReviewPrint.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/jsp/adminSiteStatusPrint.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminSiteStatusPrint</from-outcome>
+            <to-view-id>/jsp/adminSiteStatusPrint.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/jsp/adminSearchEmail.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminSearchEmail</from-outcome>
+            <to-view-id>/jsp/adminSearchEmail.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCreateMultiRole</from-outcome>
+            <to-view-id>/jsp/adminCreateMultiRole.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/jsp/adminCreateMultiRole.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminCreateMultiRole</from-outcome>
+            <to-view-id>/jsp/adminCreateMultiRole.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEWER UPLOAD DOCUMENTS -->
+
+    <navigation-rule>
+        <from-view-id>/jsp/fileUpload.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>fileUpload</from-outcome>
+            <to-view-id>/jsp/fileUpload.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>fileUploadList</from-outcome>
+            <to-view-id>/jsp/fileUploadList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/jsp/fileUploadList.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>fileUploadList</from-outcome>
+            <to-view-id>/jsp/fileUploadList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>fileUpload</from-outcome>
+            <to-view-id>/jsp/fileUpload.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>fileUploadDelConf</from-outcome>
+            <to-view-id>/jsp/fileUploadDelConf.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/jsp/fileUploadDelConf.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>fileUploadDelConf</from-outcome>
+            <to-view-id>/jsp/fileUploadDelConf.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>fileUploadList</from-outcome>
+            <to-view-id>/jsp/fileUploadList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN USER LIST BY ROLE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminUserListByRole.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminUserListByRole</from-outcome>
+            <to-view-id>/jsp/adminUserListByRole.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+    <!-- REPORT APPLICATIONS BY UNIVERSITY -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportAppsByUniversity.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportAppsByUniversity</from-outcome>
+            <to-view-id>/jsp/reportAppsByUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+    <!-- REPORT APPLICATIONS BY PROGRAM -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportAppsByProgram.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportAppsByProgram</from-outcome>
+            <to-view-id>/jsp/reportAppsByProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+    <!-- REPORT APPLICATIONS BY INSTITUTION -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportAppsByInstitution.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportAppsByInstitution</from-outcome>
+            <to-view-id>/jsp/reportAppsByInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+    <!-- REPORT APPLICATIONS BY SERVICE TYPE -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportAppsByServType.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportAppsByServType</from-outcome>
+            <to-view-id>/jsp/reportAppsByServType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+    </navigation-rule>
+
+    <!--
+     ==================================================
+      MANAGED BEANS
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>adminAppListByUniversityBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminAppListByUniversityBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminAppListByUniversitySs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminAppListByUniversitySSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminAppListByUniversityBean2</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminAppListByUniversityBean2</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminAppListByUniversityBean3</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminAppListByUniversityBean3</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminAppListByUniversitySs2</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminAppListByUniversitySSHelper2</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>AdminStatusPrintRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminStatusPrintRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminSearchRq</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminSearchRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminPersonalInfoMrRq</managed-bean-name>
+        <managed-bean-class>com.moh.admin.PersonalInfoMultiRoleRQHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>uploadFileRq</managed-bean-name>
+        <managed-bean-class>com.moh.common.FileUploadRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>uploadFileListSs</managed-bean-name>
+        <managed-bean-class>com.moh.common.FileUploadListSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>uploadFileBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.FileUploadListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>documentBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.DocumentListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminUserListByRoleSs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminUserListByRoleSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminUserListByRoleBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminUserListByRoleBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByUnivRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportAppsByUnivRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByUnivBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportAppsByUnivBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByProgRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportAppsByProgRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByProgBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportAppsByProgBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByInstRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportAppsByInstRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByInstBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportAppsByInstBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByServRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportAppsByServRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reportAppsByServBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportAppsByServBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+</faces-config>

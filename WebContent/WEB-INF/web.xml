@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+    <display-name>Restricted Registration</display-name>
+
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>
+            /WEB-INF/faces-config01.xml,
+            /WEB-INF/faces-config02.xml,
+            /WEB-INF/faces-config03.xml,
+            /WEB-INF/faces-config04.xml,
+            /WEB-INF/faces-config05.xml,
+            /WEB-INF/faces-config06.xml,
+            /WEB-INF/faces-config07.xml
+        </param-value>
+    </context-param>
+
+    <!--
+     ==================================================
+      SERVLETS
+     ==================================================
+    -->
+    <servlet>
+        <display-name>FacesServlet</display-name>
+        <servlet-name>FacesServlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <!-- init-param>
+            <param-name>javax.faces.LIFECYCLE_ID</param-name>
+            <param-value>com.sun.faces.lifecycle.PARTIAL</param-value>
+        </init-param-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--
+     ==================================================
+      FILTERS
+     ==================================================
+    -->
+    <filter>
+        <filter-name>MyFacesExtensionsFilter</filter-name>
+        <filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>
+        <init-param>
+            <param-name>maxFileSize</param-name>
+            <param-value>20m</param-value>
+        </init-param>
+    </filter>
+
+    <!--
+     ==================================================
+      FILTER MAPPINGS
+     ==================================================
+    -->
+    <filter-mapping>
+        <filter-name>MyFacesExtensionsFilter</filter-name>
+        <servlet-name>FacesServlet</servlet-name>
+    </filter-mapping>
+
+    <!--
+     ==================================================
+      SERVLET MAPPINGS
+     ==================================================
+    -->
+    <servlet-mapping>
+        <servlet-name>FacesServlet</servlet-name>
+        <!--url-pattern>/moh/*</url-pattern-->
+        <url-pattern>/moh/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

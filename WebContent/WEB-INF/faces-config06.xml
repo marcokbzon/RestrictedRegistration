@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd" version="1.2">
+
+    <!--
+     ==================================================
+      NAVIGATION RULES
+     ==================================================
+    -->
+
+    <!-- CPSO Search -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminCPSOsearch.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminCPSOsearch</from-outcome>
+            <to-view-id>/jsp/adminCPSOsearch.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCPSOapprove</from-outcome>
+            <to-view-id>/jsp/adminCPSOapprove.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CPSO Approval -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminCPSOapprove.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminCPSOapprove</from-outcome>
+            <to-view-id>/jsp/adminCPSOapprove.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCPSOsearch</from-outcome>
+            <to-view-id>/jsp/adminCPSOsearch.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CPSO Approved List of Applications -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminCPSOapprovedList.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminCPSOapprovedList</from-outcome>
+            <to-view-id>/jsp/adminCPSOapprovedList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewPrint</from-outcome>
+            <to-view-id>/jsp/appReviewPrint.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- SHIFT TRACKING (CALENDAR) -->
+    <navigation-rule>
+        <from-view-id>/jsp/shiftTracking01.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>shiftTracking01</from-outcome>
+            <to-view-id>/jsp/shiftTracking01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>shiftTracking02</from-outcome>
+            <to-view-id>/jsp/shiftTracking02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- SHIFT TRACKING (LISTING) -->
+    <navigation-rule>
+        <from-view-id>/jsp/shiftTracking02.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>shiftTracking02</from-outcome>
+            <to-view-id>/jsp/shiftTracking02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>shiftTracking03</from-outcome>
+            <to-view-id>/jsp/shiftTracking03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>shiftTracking01</from-outcome>
+            <to-view-id>/jsp/shiftTracking01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- SHIFT TRACKING (DETAILS) -->
+    <navigation-rule>
+        <from-view-id>/jsp/shiftTracking03.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>shiftTracking03</from-outcome>
+            <to-view-id>/jsp/shiftTracking03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>shiftTracking02</from-outcome>
+            <to-view-id>/jsp/shiftTracking02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- Reviewer: Application History List -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReviewAppHistory.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>appReviewAppHistory</from-outcome>
+            <to-view-id>/jsp/appReviewAppHistory.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewPrint</from-outcome>
+            <to-view-id>/jsp/appReviewPrint.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- Admin: Report Shifts By Service Type -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportShiftTrack01.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack01</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- Admin: Report Shifts By Institution -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportShiftTrack02.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack02</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- Admin: Report Shifts By Shift Type -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportShiftTrack03.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack03</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- Admin: Report Shifts By Application -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportShiftTrack04.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack04</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- Admin: Report Shifts By Date -->
+    <navigation-rule>
+        <from-view-id>/jsp/reportShiftTrack05.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack05</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--
+     ==================================================
+      MANAGED BEANS
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>adminCPSOsearchRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.CPSOSearchRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminCPSOapprovalRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.CPSOApprovalRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminCPSOapprovedAppListSs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.CPSOApprovedAppListSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminCPSOapprovedAppListBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.CPSOapprovedAppsBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftTrackCalendarSS</managed-bean-name>
+        <managed-bean-class>com.moh.shift.track.ShiftTrackingCalendarSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftTrackListRQ</managed-bean-name>
+        <managed-bean-class>com.moh.shift.track.ShiftTrackingListRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftTrackingBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ShiftTrackingBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftTrackFormRQ</managed-bean-name>
+        <managed-bean-class>com.moh.shift.track.ShiftTrackingFormRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewAppHistorySs</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppReviewAppHistorySSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewAppHistoryBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AppReviewAppHistoryBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminShiftsByServTypeReportRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportShiftsByServTypeRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftByServTypeBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportShiftsByServTypeBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminShiftsByInstitutionReportRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportShiftsByInstitutionRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftByInstitutionBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportShiftsByInstitutionBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminShiftsByShiftTypeReportRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportShiftsByShiftTypeRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminShiftsByApplicationReportRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportShiftsByApplicationRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftByApplicationBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportShiftsByApplicationBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminShiftsByDateReportRQ</managed-bean-name>
+        <managed-bean-class>com.moh.admin.ReportShiftsByDateRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>shiftByDateBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReportShiftsByDateBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+</faces-config>

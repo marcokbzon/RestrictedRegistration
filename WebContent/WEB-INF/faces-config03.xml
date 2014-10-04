@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd" version="1.2">
+
+    <!--
+     ==================================================
+      NAVIGATION RULES
+     ==================================================
+    -->
+
+    <!-- HOME REVIEWER -->
+    <navigation-rule>
+        <from-view-id>/jsp/mainReviewer.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile00</from-outcome>
+            <to-view-id>/jsp/updateProfile00.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>fileUploadList</from-outcome>
+            <to-view-id>/jsp/fileUploadList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>changePassword</from-outcome>
+            <to-view-id>/jsp/changePassword.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewAppHistory</from-outcome>
+            <to-view-id>/jsp/appReviewAppHistory.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- UPDATE PROFILE 00 -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile00.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile00</from-outcome>
+            <to-view-id>/jsp/updateProfile00.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM LISTING -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReviewList.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 01 -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview01.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewPrint</from-outcome>
+            <to-view-id>/jsp/appReviewPrint.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM PRINT -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReviewPrint.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>appReviewPrint</from-outcome>
+            <to-view-id>/jsp/appReviewPrint.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 02 -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview02.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 02 edit -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview02e.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 03 -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview03.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 03 edit -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview03e.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 04 -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview04.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 04 edit -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview04e.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 05 -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview05.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- REVIEW FORM 05 edit -->
+    <navigation-rule>
+        <from-view-id>/jsp/appReview05e.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview01</from-outcome>
+            <to-view-id>/jsp/appReview01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02</from-outcome>
+            <to-view-id>/jsp/appReview02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview02e</from-outcome>
+            <to-view-id>/jsp/appReview02e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03</from-outcome>
+            <to-view-id>/jsp/appReview03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview03e</from-outcome>
+            <to-view-id>/jsp/appReview03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04</from-outcome>
+            <to-view-id>/jsp/appReview04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview04e</from-outcome>
+            <to-view-id>/jsp/appReview04e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05</from-outcome>
+            <to-view-id>/jsp/appReview05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReview05e</from-outcome>
+            <to-view-id>/jsp/appReview05e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appReviewList</from-outcome>
+            <to-view-id>/jsp/appReviewList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--
+     ==================================================
+      MANAGED BEANS
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>reviewHeaderInfo</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ReviewHeaderBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewList</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppListingRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewInfo</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppInfoRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewSupervisor</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppSupervisorRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewDirector</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppProgDirectorRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewDean</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppPgmeDeanRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewCommittee</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppCommitteeRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewPrint</managed-bean-name>
+        <managed-bean-class>com.moh.review.AppReviewPrintRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>tabNavigation</managed-bean-name>
+        <managed-bean-class>com.moh.review.TabNavigationRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>reviewerPersonalInfoSs</managed-bean-name>
+        <managed-bean-class>com.moh.application.ReviewerPersonalInfoSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>countryCode</property-name>
+            <value>Canada</value>
+        </managed-property>
+        <managed-property>
+            <property-name>provStateCode</property-name>
+            <value>Ontario</value>
+        </managed-property>
+    </managed-bean>
+
+</faces-config>

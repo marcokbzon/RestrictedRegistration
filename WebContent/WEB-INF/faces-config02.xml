@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd" version="1.2">
+
+    <!--
+     ==================================================
+      NAVIGATION RULES
+     ==================================================
+    -->
+
+    <!-- EDIT PROFILE (PERSONAL INFO) -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile01.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile01</from-outcome>
+            <to-view-id>/jsp/updateProfile01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile02</from-outcome>
+            <to-view-id>/jsp/updateProfile02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- EDIT PROFILE (EDUCATION) -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile02.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile02</from-outcome>
+            <to-view-id>/jsp/updateProfile02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03</from-outcome>
+            <to-view-id>/jsp/updateProfile03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile01</from-outcome>
+            <to-view-id>/jsp/updateProfile01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- EDIT PROFILE (CLINICAL) -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile03.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile03</from-outcome>
+            <to-view-id>/jsp/updateProfile03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03a</from-outcome>
+            <to-view-id>/jsp/updateProfile03a.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03e</from-outcome>
+            <to-view-id>/jsp/updateProfile03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03d</from-outcome>
+            <to-view-id>/jsp/updateProfile03d.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile02</from-outcome>
+            <to-view-id>/jsp/updateProfile02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- EDIT PROFILE (CLINICAL: ADD) -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile03a.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile03a</from-outcome>
+            <to-view-id>/jsp/updateProfile03a.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03</from-outcome>
+            <to-view-id>/jsp/updateProfile03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- EDIT PROFILE (CLINICAL: EDIT) -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile03e.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile03e</from-outcome>
+            <to-view-id>/jsp/updateProfile03e.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03</from-outcome>
+            <to-view-id>/jsp/updateProfile03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- EDIT PROFILE (CLINICAL: DELETE) -->
+    <navigation-rule>
+        <from-view-id>/jsp/updateProfile03d.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile03d</from-outcome>
+            <to-view-id>/jsp/updateProfile03d.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile03</from-outcome>
+            <to-view-id>/jsp/updateProfile03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CREATE APPLICATION (PERSONAL INFO) -->
+    <navigation-rule>
+        <from-view-id>/jsp/appForm01.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>applicationForm01</from-outcome>
+            <to-view-id>/jsp/appForm01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm02</from-outcome>
+            <to-view-id>/jsp/appForm02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile01</from-outcome>
+            <to-view-id>/jsp/updateProfile01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CREATE APPLICATION (EDUCATION) -->
+    <navigation-rule>
+        <from-view-id>/jsp/appForm02.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>applicationForm02</from-outcome>
+            <to-view-id>/jsp/appForm02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm03</from-outcome>
+            <to-view-id>/jsp/appForm03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile01</from-outcome>
+            <to-view-id>/jsp/updateProfile01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm01</from-outcome>
+            <to-view-id>/jsp/appForm01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CREATE APPLICATION (CLINICAL) -->
+    <navigation-rule>
+        <from-view-id>/jsp/appForm03.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>applicationForm03</from-outcome>
+            <to-view-id>/jsp/appForm03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm04</from-outcome>
+            <to-view-id>/jsp/appForm04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>updateProfile01</from-outcome>
+            <to-view-id>/jsp/updateProfile01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm02</from-outcome>
+            <to-view-id>/jsp/appForm02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CREATE APPLICATION (EMPLOYER INFO) -->
+    <navigation-rule>
+        <from-view-id>/jsp/appForm04.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>applicationForm04</from-outcome>
+            <to-view-id>/jsp/appForm04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm05</from-outcome>
+            <to-view-id>/jsp/appForm05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm03</from-outcome>
+            <to-view-id>/jsp/appForm03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CREATE APPLICATION (AGREEMENT) -->
+    <navigation-rule>
+        <from-view-id>/jsp/appForm05.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>applicationForm05</from-outcome>
+            <to-view-id>/jsp/appForm05.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appFormList</from-outcome>
+            <to-view-id>/jsp/appFormList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm04</from-outcome>
+            <to-view-id>/jsp/appForm04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- LIST OF APPLICATIONS -->
+    <navigation-rule>
+        <from-view-id>/jsp/appFormList.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>appFormList</from-outcome>
+            <to-view-id>/jsp/appFormList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appFormStatus</from-outcome>
+            <to-view-id>/jsp/appFormStatus.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- APPLICATION STATUS -->
+    <navigation-rule>
+        <from-view-id>/jsp/appFormStatus.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>appFormStatus</from-outcome>
+            <to-view-id>/jsp/appFormStatus.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appFormList</from-outcome>
+            <to-view-id>/jsp/appFormList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--
+     ==================================================
+      MANAGED BEANS
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>personalInfoRq</managed-bean-name>
+        <managed-bean-class>com.moh.application.PersonalInfoRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>countryCode</property-name>
+            <value>CAN</value>
+        </managed-property>
+        <managed-property>
+            <property-name>provStateCode</property-name>
+            <value>ON</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>personalInfoSs</managed-bean-name>
+        <managed-bean-class>com.moh.application.PersonalInfoSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        <managed-property>
+            <property-name>countryCode</property-name>
+            <value>Canada</value>
+        </managed-property>
+        <managed-property>
+            <property-name>provStateCode</property-name>
+            <value>Ontario</value>
+        </managed-property>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>educationalInfoRq</managed-bean-name>
+        <managed-bean-class>com.moh.application.EducationalInfoRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>educationalInfoSs</managed-bean-name>
+        <managed-bean-class>com.moh.application.EducationalInfoSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>clinicalInfoRq</managed-bean-name>
+        <managed-bean-class>com.moh.application.ClinicalInfoRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>clinicalInfoSs</managed-bean-name>
+        <managed-bean-class>com.moh.application.ClinicalInfoSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>employerInfoSs</managed-bean-name>
+        <managed-bean-class>com.moh.application.EmployerInfoSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>agreementInfoSs</managed-bean-name>
+        <managed-bean-class>com.moh.application.AgreementInfoSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appFormList</managed-bean-name>
+        <managed-bean-class>com.moh.application.AppListingRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appFormStatus</managed-bean-name>
+        <managed-bean-class>com.moh.application.AppStatusRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+</faces-config>

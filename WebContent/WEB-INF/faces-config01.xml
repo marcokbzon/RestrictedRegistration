@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd" version="1.2">
+
+    <!--
+     ==================================================
+      GENERIC
+     ==================================================
+    -->
+    <application>
+        <resource-bundle>
+            <base-name>ApplicationMessages</base-name>
+            <var>appmsg</var>
+        </resource-bundle>
+
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>fr</supported-locale>
+        </locale-config>
+    </application>
+
+    <validator>
+        <validator-id>phoneValidator</validator-id>
+        <validator-class>com.moh.utils.PhoneValidator</validator-class>
+    </validator>
+
+    <validator>
+        <validator-id>emailValidator</validator-id>
+        <validator-class>com.moh.utils.EmailValidator</validator-class>
+    </validator>
+
+    <!-- lifecycle>
+    <phase-listener>com.moh.utils.LifeCycleListener</phase-listener>
+    </lifecycle-->
+
+    <!--
+     ==================================================
+      NAVIGATION RULES
+     ==================================================
+    -->
+
+    <!-- RELEASE INFORMATION -->
+    <navigation-rule>
+        <from-view-id>/jsp/releaseInfo.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>releaseInfo</from-outcome>
+            <to-view-id>/jsp/releaseInfo.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- LOGIN -->
+    <navigation-rule>
+        <from-view-id>/jsp/login.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/jsp/login.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>forgotPassword</from-outcome>
+            <to-view-id>/jsp/forgotPassword.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>createProfile</from-outcome>
+            <to-view-id>/jsp/createProfile.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>multiRole</from-outcome>
+            <to-view-id>/jsp/multiRole.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- FORGOT PASSWORD -->
+    <navigation-rule>
+        <from-view-id>/jsp/forgotPassword.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>forgotPassword</from-outcome>
+            <to-view-id>/jsp/forgotPassword.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/jsp/login.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CHANGE PASSWORD -->
+    <navigation-rule>
+        <from-view-id>/jsp/changePassword.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>changePassword</from-outcome>
+            <to-view-id>/jsp/changePassword.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- CREATE PROFILE -->
+    <navigation-rule>
+        <from-view-id>/jsp/createProfile.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>createProfile</from-outcome>
+            <to-view-id>/jsp/createProfile.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/jsp/login.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- MULTIPLE ROLES -->
+    <navigation-rule>
+        <from-view-id>/jsp/multiRole.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>multiRole</from-outcome>
+            <to-view-id>/jsp/multiRole.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainResident</from-outcome>
+            <to-view-id>/jsp/mainResident.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- HOME RESIDENT -->
+    <navigation-rule>
+        <from-view-id>/jsp/mainResident.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>updateProfile01</from-outcome>
+            <to-view-id>/jsp/updateProfile01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appFormPrint</from-outcome>
+            <to-view-id>/jsp/appFormPrint.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>applicationForm01</from-outcome>
+            <to-view-id>/jsp/appForm01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>appFormList</from-outcome>
+            <to-view-id>/jsp/appFormList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>shiftTracking01</from-outcome>
+            <to-view-id>/jsp/shiftTracking01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>changePassword</from-outcome>
+            <to-view-id>/jsp/changePassword.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- APPLICATION FORM PRINT -->
+    <navigation-rule>
+        <from-view-id>/jsp/appFormPrint.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>appFormPrint</from-outcome>
+            <to-view-id>/jsp/appFormPrint.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--
+     ==================================================
+      MANAGED BEANS - PAGES
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>login</managed-bean-name>
+        <managed-bean-class>com.moh.security.LoginRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>logout</managed-bean-name>
+        <managed-bean-class>com.moh.security.LogoutRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>forgotPassword</managed-bean-name>
+        <managed-bean-class>com.moh.security.ForgotPasswordRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>profilePrintRq</managed-bean-name>
+        <managed-bean-class>com.moh.application.ProfilePrintRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>multiRole</managed-bean-name>
+        <managed-bean-class>com.moh.security.MultiRoleRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>mainPage</managed-bean-name>
+        <managed-bean-class>com.moh.common.MainRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>changePassword</managed-bean-name>
+        <managed-bean-class>com.moh.security.ChangePasswordRQHelper</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <!--
+     ==================================================
+      MANAGED BEANS - DATA
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>yobBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.YearOfBirthBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <!--managed-property>
+          <property-name>minimumYear</property-name>
+          <value>1950</value>
+        </managed-property>
+        <managed-property>
+          <property-name>maximumYear</property-name>
+          <value>2000</value>
+        </managed-property-->
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>examYearBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.YearOfExamBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <!--managed-property>
+          <property-name>minimumYear</property-name>
+          <value>1995</value>
+        </managed-property>
+        <managed-property>
+          <property-name>maximumYear</property-name>
+          <value>2013</value>
+        </managed-property-->
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>schoolBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.SchoolResidencyBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>programBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ProgramBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>customProgramBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.CustomProgramBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>countryBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.CountryBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>provStateBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ProvStateBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>rotationBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.RotationBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>serviceTypeBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ServiceTypeBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>serviceType2Bean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.ServiceType2Bean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>lhinBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.LHINBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>institutionBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.InstitutionBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>locationBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.LocationBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appFormListingBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AppFormListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appFormStatusBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AppFormStatusBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>appReviewListingBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AppReviewListBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+</faces-config>

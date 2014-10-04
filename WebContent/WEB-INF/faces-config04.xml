@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd" version="1.2">
+
+    <!--
+     ==================================================
+      NAVIGATION RULES
+     ==================================================
+    -->
+
+    <!-- MAIN ADMIN -->
+    <navigation-rule>
+        <from-view-id>/jsp/mainAdmin.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCreateProfile</from-outcome>
+            <to-view-id>/jsp/adminCreateProfile.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>changePassword</from-outcome>
+            <to-view-id>/jsp/changePassword.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminDataLoad</from-outcome>
+            <to-view-id>/jsp/adminDataLoad.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversity</from-outcome>
+            <to-view-id>/jsp/adminUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgram</from-outcome>
+            <to-view-id>/jsp/adminProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitution</from-outcome>
+            <to-view-id>/jsp/adminInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceType</from-outcome>
+            <to-view-id>/jsp/adminServiceType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminAppListByUniversity</from-outcome>
+            <to-view-id>/jsp/adminAppListByUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminAppListByUniversity2</from-outcome>
+            <to-view-id>/jsp/adminAppListByUniversity2.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminSiteStatusPrint</from-outcome>
+            <to-view-id>/jsp/adminSiteStatusPrint.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminSearchEmail</from-outcome>
+            <to-view-id>/jsp/adminSearchEmail.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUserListByRole</from-outcome>
+            <to-view-id>/jsp/adminUserListByRole.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportAppsByUniversity</from-outcome>
+            <to-view-id>/jsp/reportAppsByUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportAppsByProgram</from-outcome>
+            <to-view-id>/jsp/reportAppsByProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportAppsByInstitution</from-outcome>
+            <to-view-id>/jsp/reportAppsByInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportAppsByServType</from-outcome>
+            <to-view-id>/jsp/reportAppsByServType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCPSOsearch</from-outcome>
+            <to-view-id>/jsp/adminCPSOsearch.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCPSOapprovedList</from-outcome>
+            <to-view-id>/jsp/adminCPSOapprovedList.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack01</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack01.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack02</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack02.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack03</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack03.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack04</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack04.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>reportShiftTrack05</from-outcome>
+            <to-view-id>/jsp/reportShiftTrack05.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN CREATE PROFILE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminCreateProfile.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminCreateProfile</from-outcome>
+            <to-view-id>/jsp/adminCreateProfile.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainReviewer</from-outcome>
+            <to-view-id>/jsp/mainReviewer.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN DATA LOAD -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminDataLoad.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminDataLoad</from-outcome>
+            <to-view-id>/jsp/adminDataLoad.jsp</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN UNIVERSITY TABLE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminUniversity.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminUniversity</from-outcome>
+            <to-view-id>/jsp/adminUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversityAdd</from-outcome>
+            <to-view-id>/jsp/adminUniversityAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversityEdit</from-outcome>
+            <to-view-id>/jsp/adminUniversityEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversityDelete</from-outcome>
+            <to-view-id>/jsp/adminUniversityDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN UNIVERSITY ADD -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminUniversityAdd.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminUniversity</from-outcome>
+            <to-view-id>/jsp/adminUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversityAdd</from-outcome>
+            <to-view-id>/jsp/adminUniversityAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN UNIVERSITY EDIT -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminUniversityEdit.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminUniversity</from-outcome>
+            <to-view-id>/jsp/adminUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversityEdit</from-outcome>
+            <to-view-id>/jsp/adminUniversityEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN UNIVERSITY DELETE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminUniversityDelete.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminUniversity</from-outcome>
+            <to-view-id>/jsp/adminUniversity.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminUniversityDelete</from-outcome>
+            <to-view-id>/jsp/adminUniversityDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN PROGRAM TABLE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminProgram.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminProgram</from-outcome>
+            <to-view-id>/jsp/adminProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgramAdd</from-outcome>
+            <to-view-id>/jsp/adminProgramAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgramEdit</from-outcome>
+            <to-view-id>/jsp/adminProgramEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgramDelete</from-outcome>
+            <to-view-id>/jsp/adminProgramDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN PROGRAM ADD -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminProgramAdd.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminProgram</from-outcome>
+            <to-view-id>/jsp/adminProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgramAdd</from-outcome>
+            <to-view-id>/jsp/adminProgramAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN PROGRAM EDIT -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminProgramEdit.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminProgram</from-outcome>
+            <to-view-id>/jsp/adminProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgramEdit</from-outcome>
+            <to-view-id>/jsp/adminProgramEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN PROGRAM DELETE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminProgramDelete.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminProgram</from-outcome>
+            <to-view-id>/jsp/adminProgram.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminProgramDelete</from-outcome>
+            <to-view-id>/jsp/adminProgramDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN SERVICE TYPE TABLE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminServiceType.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminServiceType</from-outcome>
+            <to-view-id>/jsp/adminServiceType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceTypeAdd</from-outcome>
+            <to-view-id>/jsp/adminServiceTypeAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceTypeEdit</from-outcome>
+            <to-view-id>/jsp/adminServiceTypeEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceTypeDelete</from-outcome>
+            <to-view-id>/jsp/adminServiceTypeDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN SERVICE TYPE ADD -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminServiceTypeAdd.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminServiceType</from-outcome>
+            <to-view-id>/jsp/adminServiceType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceTypeAdd</from-outcome>
+            <to-view-id>/jsp/adminServiceTypeAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN SERVICE TYPE EDIT -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminServiceTypeEdit.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminServiceType</from-outcome>
+            <to-view-id>/jsp/adminServiceType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceTypeEdit</from-outcome>
+            <to-view-id>/jsp/adminServiceTypeEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN SERVICE TYPE DELETE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminServiceTypeDelete.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminServiceType</from-outcome>
+            <to-view-id>/jsp/adminServiceType.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminServiceTypeDelete</from-outcome>
+            <to-view-id>/jsp/adminServiceTypeDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN INSTITUTION TABLE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminInstitution.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminInstitution</from-outcome>
+            <to-view-id>/jsp/adminInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitutionAdd</from-outcome>
+            <to-view-id>/jsp/adminInstitutionAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitutionEdit</from-outcome>
+            <to-view-id>/jsp/adminInstitutionEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitutionDelete</from-outcome>
+            <to-view-id>/jsp/adminInstitutionDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN INSTITUTION ADD -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminInstitutionAdd.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminInstitution</from-outcome>
+            <to-view-id>/jsp/adminInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitutionAdd</from-outcome>
+            <to-view-id>/jsp/adminInstitutionAdd.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN INSTITUTION EDIT -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminInstitutionEdit.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminInstitution</from-outcome>
+            <to-view-id>/jsp/adminInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitutionEdit</from-outcome>
+            <to-view-id>/jsp/adminInstitutionEdit.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!-- ADMIN INSTITUTION DELETE -->
+    <navigation-rule>
+        <from-view-id>/jsp/adminInstitutionDelete.jsp</from-view-id>
+
+        <navigation-case>
+            <from-outcome>adminInstitution</from-outcome>
+            <to-view-id>/jsp/adminInstitution.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>adminInstitutionDelete</from-outcome>
+            <to-view-id>/jsp/adminInstitutionDelete.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>mainAdmin</from-outcome>
+            <to-view-id>/jsp/mainAdmin.jsp</to-view-id>
+        </navigation-case>
+
+        <navigation-case>
+            <from-outcome>logout</from-outcome>
+            <to-view-id>/jsp/logout.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--
+     ==================================================
+      MANAGED BEANS
+     ==================================================
+    -->
+
+    <managed-bean>
+        <managed-bean-name>adminPersonalInfoRq</managed-bean-name>
+        <managed-bean-class>com.moh.admin.PersonalInfoRQHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminUniversitySs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminUniversitySSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminProgramSs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminProgramSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminInstitutionSs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminInstitutionSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminServiceTypeSs</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminServiceTypeSSHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>databaseCountBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.DatabaseCountBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminDataLoadRq</managed-bean-name>
+        <managed-bean-class>com.moh.admin.AdminDatabaseRQHelper</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminUniversityBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminUniversityBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminProgramBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminProgramBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminInstitutionBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminInstitutionBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <managed-bean>
+        <managed-bean-name>adminServiceTypeBean</managed-bean-name>
+        <managed-bean-class>com.moh.data.bean.AdminServiceTypeBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>
