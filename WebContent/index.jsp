@@ -1,6 +1,6 @@
 <%-- 
     Created on : May 15, 2010
-    Author     : Marco Sosa
+    Author     : M Sosa
     Company    : HeadLong Media
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
