@@ -15,6 +15,3 @@
     <jsp:forward page="/moh/jsp/login.jsp" />
   </body>
 </html>
-
-
-
