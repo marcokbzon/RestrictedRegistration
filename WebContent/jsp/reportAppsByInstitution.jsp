@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
@@ -11,6 +11,7 @@
   <%@ taglib uri="http://java.sun.com/jsf/core" prefix="f" %>
 
   <body>
+  	<% request.setCharacterEncoding("UTF-8"); %>
     <f:view>
       <h:form id="form_reportAppsByInstitution">
         <table class="print_main_wide">
@@ -31,8 +32,10 @@
                 </tr>
                 <tr>
                   <td colspan="4" class="center">
-                    <%---h:graphicImage value="http://chart.apis.google.com/chart?cht=p3&chco=333333&chd=t:#{reportAppsByInstRQ.pieChartParts}&chs=700x130&chl=#{reportAppsByInstRQ.pieChartLabels}" /---%>
+                    <%---
                     <h:graphicImage value="http://chart.googleapis.com/chart?chs=800x240&cht=p&chco=333333&chds=0,#{reportAppsByInstRQ.pieChartMaxValue}&chd=t:#{reportAppsByInstRQ.pieChartParts}&chdlp=b&chp=4.72&chl=#{reportAppsByInstRQ.pieChartLabels}&chma=5,5,5,5|0,30" />
+                    ---%>
+                    No image available: Number of parameters exceeds chart capacity
                   </td>
                 </tr>
                 <tr>
