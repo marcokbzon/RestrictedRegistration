@@ -31,7 +31,7 @@
                 </tr>
                 <tr>
                   <td width="28">&nbsp;</td>
-                  <td width="320" valign="top"><span class="print_label"> Number of Applications</span></td>
+                  <td width="320" valign="top"><span class="print_label"> Number of Applications Approved By CPSO</span></td>
                   <td width="80" valign="top"><span class="print_data"><h:outputText value="#{AdminStatusPrintRQ.numberApplicationsAll}" /></span></td>
                   <td width="200">&nbsp;</td>
                 </tr>
@@ -40,10 +40,11 @@
                 </tr>
                 <tr>
                   <td>&nbsp;</td>
-                  <td valign="top"><span class="print_label"> Number of Residents</span></td>
+                  <td valign="top"><span class="print_label"> Number of Residents Approved By CPSO</span></td>
                   <td valign="top"><span class="print_data"><h:outputText value="#{AdminStatusPrintRQ.numberResidentsAll}" /></span></td>
                   <td>&nbsp;</td>
                 </tr>
+                <!--
                 <tr>
                   <td>&nbsp;</td>
                   <td valign="top"><span class="print_label">&nbsp;&nbsp;&nbsp;&nbsp;- Who have applied at least once</span></td>
@@ -143,6 +144,7 @@
                   <td valign="bottom"><span class="print_data"><h:outputText value="#{AdminStatusPrintRQ.numberServiceTypesApplied}" /></span></td>
                   <td>&nbsp;</td>
                 </tr>
+                -->
                 <tr>
                   <td colspan="4">&nbsp;</td>
                 </tr>
