@@ -49,7 +49,8 @@ public class AdminStatusPrintRQHelper extends AbstractBean {
         String applicationsAll = statusDAO.applicationCount( DEFAULT_ALL );
         setNumberApplicationsAll( applicationsAll );
 
-        String residentsAll = statusDAO.userCount( ROLE_RESIDENT );
+        //String residentsAll = statusDAO.userCount( ROLE_RESIDENT );
+        String residentsAll = statusDAO.countResidentsApprovedByCPSO();
         setNumberResidentsAll( residentsAll );
 
         String residentsApplied = statusDAO.residentsAppliedCount();
