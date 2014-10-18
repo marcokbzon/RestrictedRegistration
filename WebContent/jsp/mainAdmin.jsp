@@ -121,7 +121,7 @@
                                       <tr>
                                         <td>
                                           <ul>
-                                            <li><h:commandLink id="link_adminSiteStatusPrint" action="#{AdminStatusPrintRQ.open}">Applications, Users and other Entities</h:commandLink></li>
+                                            <li><h:commandLink id="link_adminSiteStatusPrint" action="#{AdminStatusPrintRQ.open}">Number of Applications and Residents</h:commandLink></li>
                                           </ul>
                                           <ul>
                                             <li><h:commandLink id="link_reportAppsByUniversity" action="#{reportAppsByUnivRQ.open}">Applications by University</h:commandLink></li>
@@ -143,9 +143,11 @@
                                               <ul>
                                                 <li><h:commandLink id="link_reportShiftsByInstitution" action="#{adminShiftsByInstitutionReportRQ.shiftTrackingList}">Shifts By Institution</h:commandLink></li>
                                               </ul>
+                                              <!-- 
                                               <ul>
                                                 <li><h:commandLink id="link_reportShiftsByShiftType" action="#{adminShiftsByShiftTypeReportRQ.shiftTrackingList}">Applications By Type of Shift (Week)</h:commandLink></li>
                                               </ul>
+                                              -->
                                               <ul>
                                                 <li><h:commandLink id="link_reportShiftsByApplication" action="#{adminShiftsByApplicationReportRQ.shiftTrackingList}">Shifts By Application ID</h:commandLink></li>
                                               </ul>
