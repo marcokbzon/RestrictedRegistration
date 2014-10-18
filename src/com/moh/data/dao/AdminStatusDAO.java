@@ -12,15 +12,24 @@ public class AdminStatusDAO extends _ParentDAO {
 
     private String GET_APPLICATIONS_ALL_COUNT =
             "SELECT COUNT(*) AS ApplicationCount "
-            + "FROM Application";
+            + "FROM Application "
+            + "WHERE ApprovedByCPSO = 1";
     private String GET_RESIDENTS_APPLIED =
             "SELECT Email AS GroupList "
             + "FROM Application "
             + "GROUP BY Email";
     private String GET_RESIDENTS_ALL_COUNT =
-            "SELECT COUNT(*) AS UserCount "
-            + "FROM UserRole "
-            + "WHERE RoleID = ?";
+            "SELECT Email "
+            + "FROM Application "
+            + "WHERE RoleID = ? "
+            + "AND App";
+    private String GET_RESIDENTS_APPROVED =
+    		"SELECT ap.Email "
+    		+ "FROM Application ap, UserRole ur "
+    		+ "WHERE ap.ApprovedByCPSO = 1 "
+    		+ "AND ap.Email = ur.Email "
+    		+ "AND ur.RoleID = 'UMR' "
+    		+ "GROUP BY ap.Email";
     private String GET_UNIVERSITIES_ALL_COUNT =
             "SELECT COUNT(*) AS EntityCount "
             + "FROM University "
@@ -108,6 +117,47 @@ public class AdminStatusDAO extends _ParentDAO {
 
             while( resultSet.next() ) {
                 intResult = resultSet.getInt( "ApplicationCount" );
+            }
+        }
+        catch( Exception ex ) {
+            logger.exception( ex );
+        }
+        finally {
+            try {
+                if( resultSet != null ) {
+                    resultSet.close();
+                }
+                if( preparedStatement != null ) {
+                    preparedStatement.close();
+                }
+                if( connection != null ) {
+                    connection.close();
+                }
+            }
+            catch( SQLException sex ) {
+                logger.exception( sex );
+            }
+        }
+
+        return EMPTY_STRING + intResult;
+    }
+    
+    public String countResidentsApprovedByCPSO() {
+        logger.debugMethod( "countResidentsApprovedByCPSO" );
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        Connection connection = null;
+        int intResult = 0;
+
+        try {
+            connection = getConnection();
+
+            preparedStatement = connection.prepareStatement( GET_RESIDENTS_APPROVED );
+
+            resultSet = preparedStatement.executeQuery();
+
+            while( resultSet.next() ) {
+            	intResult++;
             }
         }
         catch( Exception ex ) {

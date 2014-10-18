@@ -21,6 +21,7 @@ public class ReportStatsDAO extends _ParentDAO {
             "SELECT uni.Name_EN, COUNT(*) AS Count "
             + "FROM Application app, UserInfo usr, UnivProg upg, University uni "
             + "WHERE app.Email = usr.Email "
+            + "AND app.ApprovedByCPSO = 1 "
             + "AND usr.UnivProgID = upg.UnivProgID "
             + "AND upg.UniversityID = uni.UniversityID "
             + "GROUP BY Name_EN";
@@ -29,6 +30,7 @@ public class ReportStatsDAO extends _ParentDAO {
             "SELECT prg.Description_EN, COUNT(*) AS Count "
             + "FROM Application app, UserInfo usr, UnivProg upg, Program prg "
             + "WHERE app.Email = usr.Email "
+            + "AND app.ApprovedByCPSO = 1 "
             + "AND usr.UnivProgID = upg.UnivProgID "
             + "AND upg.ProgramID = prg.ProgramID "
             + "GROUP BY Description_EN";
@@ -37,12 +39,14 @@ public class ReportStatsDAO extends _ParentDAO {
             "SELECT ins.Name_EN, COUNT(*) AS Count "
             + "FROM Application app, Institution ins "
             + "WHERE app.InstitutionID = ins.InstitutionID "
+            + "AND app.ApprovedByCPSO = 1 "
             + "GROUP BY Name_EN";
     // Applications By Service Type
     private String GET_APPS_BY_SERV_SQL =
             "SELECT srv.Name_EN, COUNT(*) AS Count "
             + "FROM Application app, ServiceType srv "
             + "WHERE app.ServiceTypeID = srv.ServiceTypeID "
+            + "AND app.ApprovedByCPSO = 1 "
             + "GROUP BY Name_EN";
 
     public ReportStatsDAO() {
