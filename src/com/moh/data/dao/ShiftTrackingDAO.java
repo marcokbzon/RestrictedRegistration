@@ -135,11 +135,22 @@ public class ShiftTrackingDAO extends _ParentDAO {
             "SELECT COUNT(*) AS WeekCount "
             + "FROM ShiftTracking "
             + "WHERE LocumWeek = 1";
+    /*
     private String GET_SHIFTS_BY_APPLICATION_SQL =
             "SELECT ApplicationID, SUM(Shifts) AS ShiftsTotal, SUM(Hours) AS HoursTotal "
             + "FROM ShiftTracking "
             + "GROUP BY ApplicationID "
             + "ORDER BY ApplicationID ASC";
+    */
+    private String GET_SHIFTS_BY_APPLICATION_SQL =
+    		"SELECT ap.ApplicationID, ui.FirstName, ui.LastName, ap.Email, ap.SupervisorName, it.Name_EN AS Instituion, SUM(st.Shifts) AS ShiftsTotal, SUM(st.Hours) AS HoursTotal "
+    		+ "FROM ShiftTracking st, Application ap, UserInfo ui, Institution it "
+    		+ "WHERE ap.ApplicationID = st.ApplicationID " 
+    		+ "AND ap.Email = ui.Email "
+    		+ "AND ap.InstitutionID = it.InstitutionID "  
+    		+ "GROUP BY ap.ApplicationID, ui.FirstName, ui.LastName, ap.Email, ap.SupervisorName, it.Name_EN "
+    		+ "ORDER BY ap.ApplicationID ASC";
+
     private String GET_SHIFTS_BY_DATE_SQL =
             "SELECT YearValue, Month, SUM(Shifts) AS ShiftsTotal, SUM(Hours) AS HoursTotal "
             + "FROM ShiftTracking "
@@ -977,6 +988,7 @@ public class ShiftTrackingDAO extends _ParentDAO {
         return weekCount;
     }
 
+    //TODO
     public List<ReportShiftsByApplicationData> getShiftsByApplication() {
         logger.debugMethod( "getShiftsByApplication" );
         PreparedStatement preparedStatement = null;
@@ -992,10 +1004,16 @@ public class ShiftTrackingDAO extends _ParentDAO {
 
             while( resultSet.next() ) {
                 String applicationID = resultSet.getString( "ApplicationID" );
+                String firstName = resultSet.getString( "FirstName" );
+                String lastName = resultSet.getString( "LastName" );
+                String names = firstName.trim() + " " + lastName.trim();
+                String email = resultSet.getString( "Email" );
+                String supervisorName = resultSet.getString( "SupervisorName" );
+                String instituion = resultSet.getString( "Instituion" );
                 String numberOfShifts = resultSet.getString( "ShiftsTotal" );
                 String numberOfHours = resultSet.getString( "HoursTotal" );
 
-                shiftTrackingList.add( new ReportShiftsByApplicationData( applicationID, numberOfShifts, numberOfHours ) );
+                shiftTrackingList.add( new ReportShiftsByApplicationData( applicationID, names, email, instituion, supervisorName, numberOfShifts, numberOfHours ) );
             }
         }
         catch( Exception ex ) {
