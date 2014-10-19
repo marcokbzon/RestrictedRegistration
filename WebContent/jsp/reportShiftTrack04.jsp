@@ -30,16 +30,30 @@
                   <td colspan="4">&nbsp;</td>
                 </tr>
                 <tr class="center">
-                  <td colspan="4" class="center" width="700">
+                  <td colspan="4" class="center" width="780">
                     <h:dataTable id="table_shifts" value="#{shiftByApplicationBean.shiftDM}" var="aList"
                                  styleClass="tbl_main3" headerClass="tbl_hdr" footerClass="tbl_hdr"
-                                 rowClasses="tbl_oddRow, tbl_evenRow" columnClasses="tbl_col_500, tbl_col_90, tbl_col_90">
+                                 rowClasses="tbl_oddRow, tbl_evenRow" columnClasses="tbl_col_120, tbl_col_168, tbl_col_168, tbl_col_39, tbl_col_39">
                       <h:column>
                         <f:facet name="header"><h:outputText value="Application ID" /></f:facet>
                         <h:outputText value="#{aList.applicationID}"/>
                         <f:facet name="footer"><h:outputText value="" /></f:facet>
                       </h:column>
 
+					  <h:column>
+                        <f:facet name="header"><h:outputText value="Resident Name / Email" /></f:facet>
+                        <b><h:outputText value="#{aList.residentNames}"/></b><br />
+                        <h:outputText value="#{aList.residentEmail}"/>
+                        <f:facet name="footer"><h:outputText value="" /></f:facet>
+                      </h:column>
+                      
+                      <h:column>
+                        <f:facet name="header"><h:outputText value="Institution Name / Supervisor" /></f:facet>
+                        <b><h:outputText value="#{aList.institutionName}"/></b><br />
+                        <h:outputText value="#{aList.supervisorName}"/>
+                        <f:facet name="footer"><h:outputText value="" /></f:facet>
+                      </h:column>
+                      
                       <h:column>
                         <f:facet name="header"><h:outputText value="Shifts" /></f:facet>
                         <h:outputText value="#{aList.numberOfShifts}"/>
